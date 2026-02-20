@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Log In</h2>
+        <input type="text" class="input-field" id="username" placeholder="Username">
+        <input type="password" class="input-field" id="password" placeholder="Password">
+        <button class="login-btn" onclick="checkLogin(event)">Log In</button>
+        <div class="message" id="loginMessage"></div>
+    </div>
+
+    <script>
+        function checkLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const messageDiv = document.getElementById('loginMessage');
+
+            if (username === "" || password === "") {
+                messageDiv.textContent = "Error: Please fill in all fields!";
+                messageDiv.style.color = "#f44336"; /* Red error color */
+            } else {
+                messageDiv.textContent = "Success: Login information submitted!";
+                messageDiv.style.color = "#4caf50"; /* Green success color */
+
+                // Simulate successful login (replace with actual authentication logic)
+                // For example, you might redirect to a different part of the page
+                // or display a welcome message.
+                // window.location.href = "success.html"; // Example redirection
+            }
+        }
+    </script>
+</body>
+</html>

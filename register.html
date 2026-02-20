@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERELLO's Website - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Site Header -->
+    <div class="site-header">
+        <h1>PERELLO's Website</h1>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="register-container">
+        <h2>Register</h2>
+        <input type="text" class="input-field" id="firstName" placeholder="First Name">
+        <input type="text" class="input-field" id="middleInitial" placeholder="Middle Initial">
+        <input type="text" class="input-field" id="lastName" placeholder="Last Name">
+        <input type="number" class="input-field" id="age" placeholder="Age" min="1">
+        <input type="email" class="input-field" id="gmail" placeholder="Gmail Account">
+        <button class="register-btn" onclick="saveRegistration()">Register</button>
+        <div class="message" id="regMessage"></div>
+    </div>
+
+    <!-- Stored Registration Data Section -->
+    <div class="stored-data-section">
+        <h3>Registered Information</h3>
+        <div id="storedDataContainer"></div>
+    </div>
+
+    <div id="footer">
+    <a href="https://www.facebook.com/login/"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/login"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="far fa-envelope"></i></a>
+</div>
+
+    <script src="java.js"></script>
+
+   
+</body>
+</html>
